@@ -7,7 +7,7 @@
  * [Supported Environments](#supported-environments)
  * [Installation](#installation)
  * [Configuration ](#configuration )
- * [Sample Code](#Sample-Code)
+ * [Sample Code](#sample-code)
  * [License](#license)
  
  
