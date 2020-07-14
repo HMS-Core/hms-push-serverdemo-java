@@ -112,10 +112,15 @@ public class HuaweiApp {
         String appId = option.getCredential().getAppId();
         final HuaweiApp app;
         synchronized (appsLock) {
-            ValidatorUtils.checkState(!instances.containsKey(appId), "HuaweiApp with id " + appId + " already exists!");
-            app = new HuaweiApp(option);
-            instances.put(appId, app);
-            app.startTokenRefresher();
+            if (!instances.containsKey(appId)) {
+                ValidatorUtils.checkState(!instances.containsKey(appId), "HuaweiApp with id " + appId + " already exists!");
+                app = new HuaweiApp(option);
+                instances.put(appId, app);
+                app.startTokenRefresher();
+            } else {
+                app = getInstance(option);
+            }
+
         }
         return app;
     }
