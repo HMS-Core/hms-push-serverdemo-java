@@ -47,12 +47,17 @@ public class HuaweiCredential {
     private String accessToken;
     private long expireIn;
     private Lock lock;
-    private final CloseableHttpClient httpClient = HttpClients.createDefault();
+    private CloseableHttpClient httpClient;
 
     private HuaweiCredential(Builder builder) {
         this.lock = new ReentrantLock();
         this.appId = builder.appId;
         this.appSecret = builder.appSecret;
+        if (builder.httpClient == null) {
+            httpClient = HttpClients.createDefault();
+        } else {
+            this.httpClient = builder.httpClient;
+        }
     }
 
     /**
@@ -137,6 +142,8 @@ public class HuaweiCredential {
         private String appId;
         private String appSecret;
 
+        private CloseableHttpClient httpClient;
+
         private Builder() {
         }
 
@@ -147,6 +154,11 @@ public class HuaweiCredential {
 
         public Builder setAppSecret(String appSecret) {
             this.appSecret = appSecret;
+            return this;
+        }
+
+        public Builder setHttpClient(CloseableHttpClient httpClient) {
+            this.httpClient = httpClient;
             return this;
         }
 
