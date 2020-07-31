@@ -19,10 +19,10 @@ public class Button {
     @JSONField(name = "name")
     private String name;
 
-    @JSONField(name = "actionType")
+    @JSONField(name = "action_type")
     private Integer actionType;
 
-    @JSONField(name = "intentType")
+    @JSONField(name = "intent_type")
     private Integer intentType;
 
     @JSONField(name = "intent")

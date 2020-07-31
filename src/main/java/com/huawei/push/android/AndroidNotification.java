@@ -466,6 +466,14 @@ public class AndroidNotification {
         return foregroundShow;
     }
 
+    public List<String> getInboxContent() {
+        return inboxContent;
+    }
+
+    public List<Button> getButtons() {
+        return buttons;
+    }
+
     /**
      * builder
      *
