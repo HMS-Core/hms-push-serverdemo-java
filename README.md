@@ -1,4 +1,4 @@
-# pushkit-java-sample
+# HMS Pushkit Java Severdemo
 
 
 ## Table of Contents
