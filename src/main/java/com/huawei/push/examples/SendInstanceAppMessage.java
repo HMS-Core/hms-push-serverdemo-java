@@ -24,6 +24,8 @@ import com.huawei.push.messaging.HuaweiMessaging;
 import com.huawei.push.reponse.SendResponse;
 import com.huawei.push.util.InitAppUtils;
 
+import java.util.ResourceBundle;
+
 public class SendInstanceAppMessage {
     /**
      * send instance app message
@@ -33,8 +35,6 @@ public class SendInstanceAppMessage {
     public void sendInstanceAppMessage() throws HuaweiMesssagingException {
         HuaweiApp app = InitAppUtils.initializeApp();
         HuaweiMessaging huaweiMessaging = HuaweiMessaging.getInstance(app);
-
-        String token = "AI838_-IxzMqKqeIoIqFgL9D5N8YunVqZXFU3jCohcmEkb1RMquoT7uxQkv3cXCv7IXwXjTsH0WK35DRrnLI6RBOWxqjnRqkbp6W5CFQj0zw09FG5sTuyZd2NHtxgVzUUg";
 
         JSONObject params = new JSONObject();
         params.put("key1", "test1");
@@ -60,9 +60,11 @@ public class SendInstanceAppMessage {
 
         AndroidConfig androidConfig = AndroidConfig.builder().setFastAppTargetType(1).build();
 
+        String androidPushToken = ResourceBundle.getBundle("url").getString("android_token");
+
         Message message = Message.builder().setData(data)
                 .setAndroidConfig(androidConfig)
-                .addToken(token)
+                .addToken(androidPushToken)
                 .build();
 
         SendResponse response = huaweiMessaging.sendMessage(message);

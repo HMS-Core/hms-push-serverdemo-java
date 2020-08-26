@@ -24,6 +24,8 @@ import com.huawei.push.model.Urgency;
 import com.huawei.push.reponse.SendResponse;
 import com.huawei.push.util.InitAppUtils;
 
+import java.util.ResourceBundle;
+
 public class SendDataMessage {
     /**
      * send data message
@@ -40,12 +42,12 @@ public class SendDataMessage {
                 .setBiTag("the_sample_bi_tag_for_receipt_service")
                 .build();
 
-        String token = "AND8rUp4etqJvbakK7qQoCVgFHnROXzH8o7B8fTl9rMP5VRFN83zU3Nvmabm3xw7e3gZjyBbp_wfO1jP-UyDQcZN_CtjBpoa7nx1WaVFe_3mqXMJ6nXJNUZcDyO_-k3sSw";
+        String androidPushToken = ResourceBundle.getBundle("url").getString("android_token");
 
         Message message = Message.builder()
                 .setData("{'k1':'v1', 'k2':'v2'}")
                 .setAndroidConfig(androidConfig)
-                .addToken(token)
+                .addToken(androidPushToken)
                 .build();
 
         SendResponse response = huaweiMessaging.sendMessage(message);

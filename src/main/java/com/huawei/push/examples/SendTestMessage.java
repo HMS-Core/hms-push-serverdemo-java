@@ -33,6 +33,8 @@ import com.huawei.push.model.Visibility;
 import com.huawei.push.reponse.SendResponse;
 import com.huawei.push.util.InitAppUtils;
 
+import java.util.ResourceBundle;
+
 public class SendTestMessage {
     public void sendTestMessage() throws HuaweiMesssagingException {
         HuaweiApp app = InitAppUtils.initializeApp();
@@ -88,9 +90,11 @@ public class SendTestMessage {
                 .setNotification(androidNotification)
                 .build();
 
+        String androidPushToken = ResourceBundle.getBundle("url").getString("android_token");
+
         Message message = Message.builder().setNotification(notification)
                 .setAndroidConfig(androidConfig)
-                .addToken("AND8rUp4etqJvbakK7qQoCVgFHnROXzH8o7B8fTl9rMP5VRFN83zU3Nvmabm3xw7e3gZjyBbp_wfO1jP-UyDQcZN_CtjBpoa7nx1WaVFe_3mqXMJ6nXJNUZcDyO_-k3sSw")
+                .addToken(androidPushToken)
                 .build();
 
         SendResponse response = huaweiMessaging.sendMessage(message, true);
