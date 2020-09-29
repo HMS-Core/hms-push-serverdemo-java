@@ -290,7 +290,7 @@ public class AndroidNotification {
                 ValidatorUtils.checkArgument(vibrateTiming.matches(AndroidNotification.VIBRATE_PATTERN), "Wrong vibrate timing format");
                 long vibrateTimingValue = (long) (1000 * Double
                         .valueOf(StringUtils.substringBefore(vibrateTiming.toLowerCase(Locale.getDefault()), "s")));
-                ValidatorUtils.checkArgument(vibrateTimingValue > 0 && vibrateTimingValue < 60, "Vibrate timing duration must be greater than 0 and less than 60s");
+                ValidatorUtils.checkArgument(vibrateTimingValue > 0 && vibrateTimingValue < 60000, "Vibrate timing duration must be greater than 0 and less than 60s");
             }
         }
 
