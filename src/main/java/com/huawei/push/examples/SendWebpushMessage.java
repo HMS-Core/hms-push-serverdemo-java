@@ -28,6 +28,8 @@ import com.huawei.push.webpush.WebHmsOptions;
 import com.huawei.push.webpush.WebNotification;
 import com.huawei.push.webpush.WebpushHeaders;
 
+import java.util.ResourceBundle;
+
 public class SendWebpushMessage {
 
     public void sendWebpushMessage() throws HuaweiMesssagingException {
@@ -67,12 +69,12 @@ public class SendWebpushMessage {
                 .setWebHmsOptions(webHmsOptions)
                 .build();
 
-        String token = "cTW+APk7SomjRb2dOB7UIfyn_6q-hdNR8TfbkEcRus7fR2DrfXqS6EwINiuy1dhceiPXgE9t6rYkVNuRrcFcCPsCfNAIVR4N54Whfhow4r51hY05MB43r7461pls0qj9nhF4gQ";
+        String webPushToken = ResourceBundle.getBundle("url").getString("webpush_token");
 
         Message message = Message.builder().setNotification(notification)
                 .setData("nb!")
                 .setWebpush(webpush)
-                .addToken(token)
+                .addToken(webPushToken)
                 .build();
 
         SendResponse response = huaweiMessaging.sendMessage(message);

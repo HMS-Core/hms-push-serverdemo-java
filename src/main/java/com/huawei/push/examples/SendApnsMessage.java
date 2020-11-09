@@ -27,6 +27,8 @@ import com.huawei.push.messaging.HuaweiMessaging;
 import com.huawei.push.reponse.SendResponse;
 import com.huawei.push.util.InitAppUtils;
 
+import java.util.ResourceBundle;
+
 public class SendApnsMessage {
     /**
      * send apns message
@@ -61,8 +63,10 @@ public class SendApnsMessage {
                 .setHmsOptions(apnsHmsOptions)
                 .build();
 
+        String apnsPushToken = ResourceBundle.getBundle("url").getString("apns_token");
+
         Message message = Message.builder().setApns(apns)
-                .addToken("9FDA406A04BDE017A2F53EB9831846FBF5308567DE9A4E986D96512136F72C3D")
+                .addToken(apnsPushToken)
                 .build();
 
         SendResponse response = huaweiMessaging.sendMessage(message);
