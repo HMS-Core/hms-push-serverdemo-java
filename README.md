@@ -42,28 +42,28 @@ The following table lists parameters to be set.
 
 ## Sample Code
 
-### 1 Send an Android data message.
+#### 1. Send an Android data message.
 Code location: examples/sendDataMessage.java
 
-### 2 Send an Android notification message.
+#### 2. Send an Android notification message.
 Code location: examples/sendNotifyMessage.java
 
-### 3 Send a message by topic.
+#### 3. Send a message by topic.
 Code location: examples/sendTopicMessage.java
 
-### 4 Send a message by conditions.
+#### 4. Send a message by conditions.
 Code location: examples/sendConditionMessage.java
 
-### 5 Send a message to a Huawei quick app.
+#### 5. Send a message to a Huawei quick app.
 Code location: examples/sendInstanceAppMessage.java
 
-### 6 Send a message through the WebPush agent.
+#### 6. Send a message through the WebPush agent.
 Code location: examples/sendWebpushMessage.java
 
-### 7 Send a message through the APNs agent.
+#### 7. Send a message through the APNs agent.
 Code location: examples/sendApnsMessage.java
 
-### 8 Send a test message.
+#### 8. Send a test message.
 Code location: examples/sendTestMessage.java
 
 ## Question or issues
