@@ -1,5 +1,5 @@
 # HMS Pushkit Java Severdemo
-
+English | [中文](https://github.com/HMS-Core/hms-push-serverdemo-java/blob/master/README_ZH.md)
 
 ## Table of Contents
 
