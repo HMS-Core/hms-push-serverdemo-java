@@ -1,5 +1,5 @@
 # 华为推送服务服务端Java示例代码
-
+[English](https://github.com/HMS-Core/hms-push-serverdemo-java) | 中文
 
 ## 目录
 
