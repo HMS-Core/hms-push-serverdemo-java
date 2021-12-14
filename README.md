@@ -1,81 +1,75 @@
-# HMS Pushkit Java Severdemo
-English | [中文](https://github.com/HMS-Core/hms-push-serverdemo-java/blob/master/README_ZH.md)
+# HMS Core Push Kit Sample Code (Java)
+English | [中文](README_ZH.md)
 
-## Table of Contents
+## Contents
 
- * [Introduction](#introduction)
- * [Supported Environments](#supported-environments)
- * [Installation](#installation)
- * [Configuration ](#configuration )
- * [Sample Code](#sample-code)
- * [License](#license)
- 
- 
+ * [Introduction](#Introduction)
+ * [Environment Requirements](#Environment-Requirements)
+ * [Installation](#Installation)
+ * [Configuration](#Configuration)
+ * [Sample Code](#Sample-Code)
+ * [License](#License)
+
+
 ## Introduction
 
-Java sample code encapsulates APIs of the HUAWEI Push Kit server. It provides many sample programs for your reference or usage.
+The sample code for Java encapsulates the server-side APIs of Push Kit, for your reference or direct use.
 
 The following table describes packages of Java sample code.
-
-| Package | Description |
+| Package| Description|
 | ---- | ---- |
-| examples | Sample code packages. Each package can run independently. |
-| messaging | Package where APIs of the HUAWEI Push Kit server are encapsulated. |
+| examples| Sample code packages.|
+| messaging| Package where Push Kit server APIs are encapsulated.|
 
-## Supported Environments
+## Environment Requirements
 
-For HUAWEI Push Kit, JDK 8.0 or later and IntelliJ IDEA are recommended.
+JDK 8.0 or later is recommended.
 
-## Installation
-Configure your build tool to import the sample code into your IDE.
+## Configuration
 
-## Configuration 
+Set the following parameters.
 
-The following table lists parameters to be set.
-
-| Parameter | Description |
+| Parameter| Description|
 | ---- | ---- |
-| appid | App ID, which is obtained from app information. |
-| appsecret | Secret access key of an app, which is obtained from app information. |
-| token_server | URL for the Huawei OAuth 2.0 service to obtain a token, please refer to [Generating an App-Level Access Token](https://developer.huawei.com/consumer/en/doc/development/parts-Guides/generating_app_level_access_token). |
-| push_open_url | URL for accessing HUAWEI Push Kit, please refer to [Sending Messages](https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-sendapi). |
+| appid| App ID, which is obtained from the app information.|
+| appsecret | App secret, which is obtained from the app information.|
+| token_server | URL for Huawei OAuth 2.0 to obtain a token. For details, please refer to [OAuth 2.0-based Authentication](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/oauth2-0000001212610981?ha_source=hms1). |
+| push_open_url | Access address of Push Kit. For details, please refer to [Downlink Message Sending](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-server-dev-0000001050040110?ha_source=hms1). |
 
 ## Sample Code
 
-#### 1. Send an Android data message.
-Code location: examples/sendDataMessage.java
+1. Send a data message to an Android app.
+File path: **examples/sendDataMessage.java**
 
-#### 2. Send an Android notification message.
-Code location: examples/sendNotifyMessage.java
+	.	Send a notification message to an Android app.
+File path: **examples/sendNotifyMessage.java**
 
-#### 3. Send a message by topic.
-Code location: examples/sendTopicMessage.java
+	.	Send a message by topic.
+File path: **examples/sendTopicMessage.java**
 
-#### 4. Send a message by conditions.
-Code location: examples/sendConditionMessage.java
+	.	Send a message by condition.
+File path: **examples/sendConditionMessage.java**
 
-#### 5. Send a message to a Huawei quick app.
-Code location: examples/sendInstanceAppMessage.java
+	.	Send a message to a Huawei quick app.
+File path: **examples/sendInstanceAppMessage.java**
 
-#### 6. Send a message through the WebPush agent.
-Code location: examples/sendWebpushMessage.java
+	.	Send a message by WebPush.
+File path: **examples/sendWebpushMessage.java**
 
-#### 7. Send a message through the APNs agent.
-Code location: examples/sendApnsMessage.java
+	.	Send a message by APNs.
+File path: **examples/sendApnsMessage.java**
 
-#### 8. Send a test message.
-Code location: examples/sendTestMessage.java
+	.	Send a test message.
+File path: **examples/sendTestMessage.java**
 
-## Question or issues
-If you want to evaluate more about HMS Core,
-[r/HMSCore on Reddit](https://www.reddit.com/r/HuaweiDevelopers/) is for you to keep up with latest news about HMS Core, and to exchange insights with other developers.
+## Technical Support
+You can visit the [Reddit community](https://www.reddit.com/r/HuaweiDevelopers/) to obtain the latest information about HMS Core and communicate with other developers.
 
-If you have questions about how to use HMS samples, try the following options:
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services) is the best place for any programming questions. Be sure to tag your question with 
-`huawei-mobile-services`.
-- [Huawei Developer Forum](https://forums.developer.huawei.com/forumPortal/en/home?fid=0101187876626530001) HMS Core Module is great for general questions, or seeking recommendations and opinions.
+If you have any questions about the sample code, try the following:
+- Visit [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services?tab=Votes), submit your questions, and tag them with `huawei-mobile-services`. Huawei experts will answer your questions.
+- Visit the HMS Core section in the [HUAWEI Developer Forum](https://forums.developer.huawei.com/forumPortal/en/home?fid=0101187876626530001?ha_source=hms1) and communicate with other developers.
 
-If you run into a bug in our samples, please submit an [issue](https://github.com/HMS-Core/hms-push-serverdemo-java/issues) to the Repository. Even better you can submit a [Pull Request](https://github.com/HMS-Core/hms-push-serverdemo-java/pulls) with a fix.
+If you encounter any issues when using the sample code, submit your [issues](https://github.com/HMS-Core/hms-push-serverdemo-java/issues) or submit a [pull request](https://github.com/HMS-Core/hms-push-serverdemo-java/pulls).
 
 ##  License
-Pushkit Java sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+The sample code is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).

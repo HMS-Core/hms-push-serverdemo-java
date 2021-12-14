@@ -1,5 +1,5 @@
 # 华为推送服务服务端Java示例代码
-[English](https://github.com/HMS-Core/hms-push-serverdemo-java) | 中文
+[English](README.md) | 中文
 
 ## 目录
 
@@ -9,69 +9,65 @@
  * [配置](#配置)
  * [示例代码](#示例代码)
  * [授权许可](#授权许可)
- 
- 
+
+
 ## 简介
 
-Java示例代码对华为推送服务（HUAWEI Push Kit）服务端接口进行封装，包含丰富的示例程序，方便您参考或直接使用。
+Java示例代码对华为推送服务（HUAWEI Push Kit）服务端接口进行封装，供您参考使用。
 
-示例代码主要包括以下组成：
-
+示例代码目录结构如下：
 | 包名 | 说明 |
 | ---- | ---- |
-| examples | 示例代码包，每个包都可以独立运行 |
-| messaging | 推送服务的服务端接口封装包 |
+| examples | 示例代码包 |
+| messaging | 服务端接口封装包 |
 
 ## 环境要求
 
-推荐使用JDK 8.0及以上版本和IntelliJ IDEA。
-
-## 安装
-配置好编译工具，将示例代码导入您的集成开发环境（IDE）中。
+推荐使用JDK 8.0及以上版本。
 
 ## 配置
 
-请配置以下参数：
+参数说明：
 
 | 参数 | 说明 |
 | ---- | ---- |
 | appid | 应用ID，从应用信息中获取 |
 | appsecret | 应用访问密钥，从应用信息中获取 |
-| token_server | 华为OAuth 2.0获取token的地址。具体请参考 [基于OAuth 2.0开放鉴权-客户端模式](https://developer.huawei.com/consumer/cn/doc/development/parts-Guides/generating_app_level_access_token). |
-| push_open_url | 推送服务的访问地址。具体请参考 [推送服务-下行消息](https://developer.huawei.com/consumer/cn/doc/development/HMS-References/push-sendapi). |
+| token_server | 华为OAuth 2.0获取token的地址。详情请参见 [基于OAuth 2.0开放鉴权-客户端模式](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/oauth2-0000001212610981#section128682386159?ha_source=hms1). |
+| push_open_url | 推送服务的访问地址。详情请参见 [推送服务-下行消息](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/android-server-dev-0000001050040110?ha_source=hms1). |
 
 ## 示例代码
 
-#### 1. 发送Android透传消息
-代码位置：examples/sendDataMessage.java
+1. 发送Android透传消息
+文件目录：examples/sendDataMessage.java
 
-#### 2.	发送Android通知栏消息
-代码位置：examples/sendNotifyMessage.java
+2.	发送Android通知栏消息
+文件目录：examples/sendNotifyMessage.java
 
-#### 3.	基于主题发送消息
-代码位置：examples/sendTopicMessage.java
+3.	基于主题发送消息
+文件目录：examples/sendTopicMessage.java
 
-#### 4.	基于条件发送消息
-代码位置：examples/sendConditionMessage.java
+4.	基于条件发送消息
+文件目录：examples/sendConditionMessage.java
 
-#### 5.	向华为快应用发送消息
-代码位置：examples/sendInstanceAppMessage.java
+5.	向华为快应用发送消息
+文件目录：examples/sendInstanceAppMessage.java
 
-#### 6.	基于WebPush代理发送消息
-代码位置：examples/sendWebpushMessage.java
+6.	基于WebPush代理发送消息
+文件目录：examples/sendWebpushMessage.java
 
-#### 7.	基于APNs代理发送消息
-代码位置：examples/sendApnsMessage.java
+7.	基于APNs代理发送消息
+文件目录：examples/sendApnsMessage.java
 
-#### 8.	发送测试消息
-代码位置：examples/sendTestMessage.java
+8.	发送测试消息
+文件目录：examples/sendTestMessage.java
 
 ## 技术支持
 如果您对HMS Core还处于评估阶段，可在[Reddit社区](https://www.reddit.com/r/HuaweiDevelopers/)获取关于HMS Core的最新讯息，并与其他开发者交流见解。
 
 如果您对使用HMS示例代码有疑问，请尝试：
-- 开发过程遇到问题上[Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services)，在`huawei-mobile-services`标签下提问，有华为研发专家在线一对一解决您的问题。
-- 到[华为开发者论坛](https://developer.huawei.com/consumer/cn/forum/blockdisplay?fid=18) HMS Core板块与其他开发者进行交流。
+- 开发过程遇到问题上[Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services?tab=Votes)，在`huawei-mobile-services`标签下提问，有华为研发专家在线一对一解决您的问题。
+- 到[华为开发者论坛](https://developer.huawei.com/consumer/cn/forum/blockdisplay?fid=18?ha_source=hms1) HMS Core板块与其他开发者进行交流。
 
 如果您在尝试示例代码中遇到问题，请向仓库提交[issue](https://github.com/HMS-Core/hms-push-serverdemo-java/issues)，也欢迎您提交[Pull Request](https://github.com/HMS-Core/hms-push-serverdemo-java/pulls)。
 
