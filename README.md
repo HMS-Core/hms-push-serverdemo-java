@@ -39,29 +39,29 @@ Set the following parameters.
 
 ## Sample Code
 
-1. Send a data message to an Android app.
-File path: **examples/sendDataMessage.java**
+#### 1. Send an Android data message.
+Code location: [examples/sendDataMessage.java](src/main/java/com/huawei/push/examples/SendDataMessage.java)
 
-	.	Send a notification message to an Android app.
-File path: **examples/sendNotifyMessage.java**
+#### 2. Send an Android notification message.
+Code location: [examples/sendNotifyMessage.java](src/main/java/com/huawei/push/examples/SendNotifyMessage.java)
 
-	.	Send a message by topic.
-File path: **examples/sendTopicMessage.java**
+#### 3. Send a message by topic.
+Code location: [examples/sendTopicMessage.java](src/main/java/com/huawei/push/examples/SendTopicMessage.java)
 
-	.	Send a message by condition.
-File path: **examples/sendConditionMessage.java**
+#### 4. Send a message by conditions.
+Code location: [examples/sendConditionMessage.java](src/main/java/com/huawei/push/examples/SendConditionMessage.java)
 
-	.	Send a message to a Huawei quick app.
-File path: **examples/sendInstanceAppMessage.java**
+#### 5. Send a message to a Huawei quick app.
+Code location: [examples/sendInstanceAppMessage.java](src/main/java/com/huawei/push/examples/SendInstanceAppMessage.java)
 
-	.	Send a message by WebPush.
-File path: **examples/sendWebpushMessage.java**
+#### 6. Send a message through the WebPush agent.
+Code location: [examples/sendWebpushMessage.java](src/main/java/com/huawei/push/examples/SendWebpushMessage.java)
 
-	.	Send a message by APNs.
-File path: **examples/sendApnsMessage.java**
+#### 7. Send a message through the APNs agent.
+Code location: [examples/sendApnsMessage.java](src/main/java/com/huawei/push/examples/SendApnsMessage.java)
 
-	.	Send a test message.
-File path: **examples/sendTestMessage.java**
+#### 8. Send a test message.
+Code location: [examples/sendTestMessage.java](src/main/java/com/huawei/push/examples/SendTestMessage.java)
 
 ## Technical Support
 You can visit the [Reddit community](https://www.reddit.com/r/HuaweiDevelopers/) to obtain the latest information about HMS Core and communicate with other developers.
