@@ -39,29 +39,29 @@ Java示例代码对华为推送服务（HUAWEI Push Kit）服务端接口进行�
 
 ## 示例代码
 
-1. 发送Android透传消息
-文件目录：examples/sendDataMessage.java
+#### 1. 发送Android透传消息
+代码位置：[examples/sendDataMessage.java](src/main/java/com/huawei/push/examples/SendDataMessage.java)
 
-2.	发送Android通知栏消息
-文件目录：examples/sendNotifyMessage.java
+#### 2.	发送Android通知栏消息
+代码位置：[examples/sendNotifyMessage.java](src/main/java/com/huawei/push/examples/SendNotifyMessage.java)
 
-3.	基于主题发送消息
-文件目录：examples/sendTopicMessage.java
+#### 3.	基于主题发送消息
+代码位置：[examples/sendTopicMessage.java](src/main/java/com/huawei/push/examples/SendTopicMessage.java)
 
-4.	基于条件发送消息
-文件目录：examples/sendConditionMessage.java
+#### 4.	基于条件发送消息
+代码位置：[examples/sendConditionMessage.java](src/main/java/com/huawei/push/examples/SendConditionMessage.java)
 
-5.	向华为快应用发送消息
-文件目录：examples/sendInstanceAppMessage.java
+#### 5.	向华为快应用发送消息
+代码位置：[examples/sendInstanceAppMessage.java](src/main/java/com/huawei/push/examples/SendInstanceAppMessage.java)
 
-6.	基于WebPush代理发送消息
-文件目录：examples/sendWebpushMessage.java
+#### 6.	基于WebPush代理发送消息
+代码位置：[examples/sendWebpushMessage.java](src/main/java/com/huawei/push/examples/SendWebpushMessage.java)
 
-7.	基于APNs代理发送消息
-文件目录：examples/sendApnsMessage.java
+#### 7.	基于APNs代理发送消息
+代码位置：[examples/sendApnsMessage.java](src/main/java/com/huawei/push/examples/SendApnsMessage.java)
 
-8.	发送测试消息
-文件目录：examples/sendTestMessage.java
+#### 8.	发送测试消息
+代码位置：[examples/sendTestMessage.java](src/main/java/com/huawei/push/examples/SendTestMessage.java)
 
 ## 技术支持
 如果您对HMS Core还处于评估阶段，可在[Reddit社区](https://www.reddit.com/r/HuaweiDevelopers/)获取关于HMS Core的最新讯息，并与其他开发者交流见解。
