@@ -43,7 +43,7 @@ public class SendDataMessage {
         String token = "AND8rUp4etqJvbakK7qQoCVgFHnROXzH8o7B8fTl9rMP5VRFN83zU3Nvmabm3xw7e3gZjyBbp_wfO1jP-UyDQcZN_CtjBpoa7nx1WaVFe_3mqXMJ6nXJNUZcDyO_-k3sSw";
 
         Message message = Message.builder()
-                .setData("{'k1':'v1', 'k2':'v2'}")
+                .setData("{'key1':'value1', 'key2':'value2'}")
                 .setAndroidConfig(androidConfig)
                 .addToken(token)
                 .build();
