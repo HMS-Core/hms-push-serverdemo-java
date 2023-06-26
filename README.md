@@ -40,28 +40,28 @@ Set the following parameters.
 ## Sample Code
 
 #### 1. Send an Android data message.
-Code location: [examples/sendDataMessage.java](src/main/java/com/huawei/push/examples/SendDataMessage.java)
+Code location: [examples/SendDataMessage.java](src/main/java/com/huawei/push/examples/SendDataMessage.java)
 
 #### 2. Send an Android notification message.
-Code location: [examples/sendNotifyMessage.java](src/main/java/com/huawei/push/examples/SendNotifyMessage.java)
+Code location: [examples/SendNotifyMessage.java](src/main/java/com/huawei/push/examples/SendNotifyMessage.java)
 
 #### 3. Send a message by topic.
-Code location: [examples/sendTopicMessage.java](src/main/java/com/huawei/push/examples/SendTopicMessage.java)
+Code location: [examples/SendTopicMessage.java](src/main/java/com/huawei/push/examples/SendTopicMessage.java)
 
 #### 4. Send a message by conditions.
-Code location: [examples/sendConditionMessage.java](src/main/java/com/huawei/push/examples/SendConditionMessage.java)
+Code location: [examples/SendConditionMessage.java](src/main/java/com/huawei/push/examples/SendConditionMessage.java)
 
 #### 5. Send a message to a Huawei quick app.
-Code location: [examples/sendInstanceAppMessage.java](src/main/java/com/huawei/push/examples/SendInstanceAppMessage.java)
+Code location: [examples/SendInstanceAppMessage.java](src/main/java/com/huawei/push/examples/SendInstanceAppMessage.java)
 
 #### 6. Send a message through the WebPush agent.
-Code location: [examples/sendWebpushMessage.java](src/main/java/com/huawei/push/examples/SendWebpushMessage.java)
+Code location: [examples/SendWebpushMessage.java](src/main/java/com/huawei/push/examples/SendWebpushMessage.java)
 
 #### 7. Send a message through the APNs agent.
-Code location: [examples/sendApnsMessage.java](src/main/java/com/huawei/push/examples/SendApnsMessage.java)
+Code location: [examples/SendApnsMessage.java](src/main/java/com/huawei/push/examples/SendApnsMessage.java)
 
 #### 8. Send a test message.
-Code location: [examples/sendTestMessage.java](src/main/java/com/huawei/push/examples/SendTestMessage.java)
+Code location: [examples/SendTestMessage.java](src/main/java/com/huawei/push/examples/SendTestMessage.java)
 
 ## Technical Support
 You can visit the [Reddit community](https://www.reddit.com/r/HuaweiDevelopers/) to obtain the latest information about HMS Core and communicate with other developers.
