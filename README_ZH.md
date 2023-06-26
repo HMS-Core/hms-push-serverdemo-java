@@ -40,28 +40,28 @@ Java示例代码对华为推送服务（HUAWEI Push Kit）服务端接口进行�
 ## 示例代码
 
 #### 1. 发送Android透传消息
-代码位置：[examples/sendDataMessage.java](src/main/java/com/huawei/push/examples/SendDataMessage.java)
+代码位置：[examples/SendDataMessage.java](src/main/java/com/huawei/push/examples/SendDataMessage.java)
 
 #### 2.	发送Android通知栏消息
-代码位置：[examples/sendNotifyMessage.java](src/main/java/com/huawei/push/examples/SendNotifyMessage.java)
+代码位置：[examples/SendNotifyMessage.java](src/main/java/com/huawei/push/examples/SendNotifyMessage.java)
 
 #### 3.	基于主题发送消息
-代码位置：[examples/sendTopicMessage.java](src/main/java/com/huawei/push/examples/SendTopicMessage.java)
+代码位置：[examples/SendTopicMessage.java](src/main/java/com/huawei/push/examples/SendTopicMessage.java)
 
 #### 4.	基于条件发送消息
-代码位置：[examples/sendConditionMessage.java](src/main/java/com/huawei/push/examples/SendConditionMessage.java)
+代码位置：[examples/SendConditionMessage.java](src/main/java/com/huawei/push/examples/SendConditionMessage.java)
 
 #### 5.	向华为快应用发送消息
-代码位置：[examples/sendInstanceAppMessage.java](src/main/java/com/huawei/push/examples/SendInstanceAppMessage.java)
+代码位置：[examples/SendInstanceAppMessage.java](src/main/java/com/huawei/push/examples/SendInstanceAppMessage.java)
 
 #### 6.	基于WebPush代理发送消息
-代码位置：[examples/sendWebpushMessage.java](src/main/java/com/huawei/push/examples/SendWebpushMessage.java)
+代码位置：[examples/SendWebpushMessage.java](src/main/java/com/huawei/push/examples/SendWebpushMessage.java)
 
 #### 7.	基于APNs代理发送消息
-代码位置：[examples/sendApnsMessage.java](src/main/java/com/huawei/push/examples/SendApnsMessage.java)
+代码位置：[examples/SendApnsMessage.java](src/main/java/com/huawei/push/examples/SendApnsMessage.java)
 
 #### 8.	发送测试消息
-代码位置：[examples/sendTestMessage.java](src/main/java/com/huawei/push/examples/SendTestMessage.java)
+代码位置：[examples/SendTestMessage.java](src/main/java/com/huawei/push/examples/SendTestMessage.java)
 
 ## 技术支持
 如果您对HMS Core还处于评估阶段，可在[Reddit社区](https://www.reddit.com/r/HuaweiDevelopers/)获取关于HMS Core的最新讯息，并与其他开发者交流见解。
