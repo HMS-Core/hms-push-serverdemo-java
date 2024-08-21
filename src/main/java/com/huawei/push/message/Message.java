@@ -21,8 +21,6 @@ import com.google.common.primitives.Booleans;
 import com.huawei.push.util.CollectionUtils;
 import com.huawei.push.util.ValidatorUtils;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 

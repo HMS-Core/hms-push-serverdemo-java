@@ -17,8 +17,11 @@ package com.huawei.push.messaging;
 
 import com.huawei.push.exception.HuaweiMesssagingException;
 import com.huawei.push.message.Message;
+import com.huawei.push.message.Review;
 import com.huawei.push.message.TopicMessage;
 import com.huawei.push.reponse.SendResponse;
+
+import java.util.List;
 
 /**
  * sending messages interface
@@ -30,10 +33,11 @@ public interface HuaweiMessageClient {
      *
      * @param message      message {@link Message}
      * @param validateOnly A boolean indicating whether to send message for test. or not.
+     * @param review      A list of {@link Review} objects.
      * @return {@link SendResponse}.
      * @throws HuaweiMesssagingException
      */
-    SendResponse send(Message message, boolean validateOnly, String accessToken) throws HuaweiMesssagingException;
+    SendResponse send(Message message, boolean validateOnly, List<Review> review, String accessToken) throws HuaweiMesssagingException;
 
     SendResponse send(TopicMessage message, String operation, String accessToken) throws HuaweiMesssagingException;
 }

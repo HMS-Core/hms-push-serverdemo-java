@@ -20,6 +20,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.huawei.push.exception.HuaweiMesssagingException;
 import com.huawei.push.message.Message;
+import com.huawei.push.message.Review;
 import com.huawei.push.message.TopicMessage;
 import com.huawei.push.model.TopicOperation;
 import com.huawei.push.reponse.SendResponse;
@@ -37,6 +38,7 @@ import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 import java.text.MessageFormat;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -69,9 +71,9 @@ public class HuaweiMessageClientImpl implements HuaweiMessageClient {
     }
 
     @Override
-    public SendResponse send(Message message, boolean validateOnly, String accessToken) throws HuaweiMesssagingException {
+    public SendResponse send(Message message, boolean validateOnly, List<Review> review, String accessToken) throws HuaweiMesssagingException {
         try {
-            return sendRequest(message, validateOnly, accessToken);
+            return sendRequest(message, validateOnly, review, accessToken);
         } catch (IOException e) {
             throw new HuaweiMesssagingException(HuaweiMessaging.INTERNAL_ERROR, "Error while calling HCM backend service", e);
         }
@@ -125,14 +127,14 @@ public class HuaweiMessageClientImpl implements HuaweiMessageClient {
     /**
      * send request
      *
-     * @param message     message {@link Message}
+     * @param message      message {@link Message}
      * @param validateOnly A boolean indicating whether to send message for test or not.
      * @param accessToken  A String for oauth
      * @return {@link SendResponse}
      * @throws IOException If a error occurs when sending request
      */
-    private SendResponse sendRequest(Message message, boolean validateOnly, String accessToken) throws IOException, HuaweiMesssagingException {
-        Map<String, Object> map = createRequestMap(message, validateOnly);
+    private SendResponse sendRequest(Message message, boolean validateOnly, List<Review> review, String accessToken) throws IOException, HuaweiMesssagingException {
+        Map<String, Object> map = createRequestMap(message, validateOnly, review);
         HttpPost httpPost = new HttpPost(this.HcmPushUrl);
         StringEntity entity = new StringEntity(JSON.toJSONString(map), "UTF-8");
 //        String aqa = JSON.toJSONString(map);
@@ -163,13 +165,17 @@ public class HuaweiMessageClientImpl implements HuaweiMessageClient {
      *
      * @param message      A non-null {@link Message} to be sent.
      * @param validateOnly A boolean indicating whether to send message for test or not.
+     * @param review       A list of {@link Review} objects.
      * @return a map of request
      */
-    private Map<String, Object> createRequestMap(Message message, boolean validateOnly) {
+    private Map<String, Object> createRequestMap(Message message, boolean validateOnly, List<Review> review) {
         return new HashMap<String, Object>() {
             {
                 put("validate_only", validateOnly);
                 put("message", message);
+                if (review != null && review.size() > 0) {
+                    put("review", review);
+                }
             }
         };
     }

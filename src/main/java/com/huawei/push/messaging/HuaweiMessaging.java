@@ -19,13 +19,15 @@ import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import com.huawei.push.exception.HuaweiMesssagingException;
 import com.huawei.push.message.Message;
+import com.huawei.push.message.Review;
 import com.huawei.push.message.TopicMessage;
 import com.huawei.push.model.TopicOperation;
 import com.huawei.push.reponse.SendResponse;
 import com.huawei.push.util.ValidatorUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 /**
  * This class is the entrance for all server-side HCM actions.
@@ -83,7 +85,7 @@ public class HuaweiMessaging {
      *                                   delivery.
      */
     public SendResponse sendMessage(Message message) throws HuaweiMesssagingException {
-        return sendMessage(message, false);
+        return sendMessage(message, false, null);
     }
 
     /**
@@ -116,7 +118,6 @@ public class HuaweiMessaging {
         return messagingClient.send(topicMessage, TopicOperation.LIST.getValue(), ImplHuaweiTrampolines.getAccessToken(app));
     }
 
-
     /**
      * Sends message {@link Message}
      *
@@ -131,7 +132,25 @@ public class HuaweiMessaging {
     public SendResponse sendMessage(Message message, boolean validateOnly) throws HuaweiMesssagingException {
         ValidatorUtils.checkArgument(message != null, "message must not be null");
         final HuaweiMessageClient messagingClient = getMessagingClient();
-        return messagingClient.send(message, validateOnly, ImplHuaweiTrampolines.getAccessToken(app));
+        return messagingClient.send(message, validateOnly, null, ImplHuaweiTrampolines.getAccessToken(app));
+    }
+
+    /**
+     * Sends message {@link Message}
+     *
+     * <p>If the {@code validateOnly} option is set to true, the message will not be actually sent. Instead
+     * HCM performs all the necessary validations, and emulates the send operation.
+     *
+     * @param message      message {@link Message} to be sent.
+     * @param validateOnly a boolean indicating whether to send message for test or not.
+     * @param review       A list of {@link Review} objects.
+     * @return {@link SendResponse}.
+     * @throws HuaweiMesssagingException exception.
+     */
+    public SendResponse sendMessage(Message message, boolean validateOnly, List<Review> review) throws HuaweiMesssagingException {
+        ValidatorUtils.checkArgument(message != null, "message must not be null");
+        final HuaweiMessageClient messagingClient = getMessagingClient();
+        return messagingClient.send(message, validateOnly, review, ImplHuaweiTrampolines.getAccessToken(app));
     }
 
     /**
